@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { GlobalStyles } from './styles/globalstyles'
+import { Header } from './styles/styles'
+import Button from './components/Button'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+
+      <Header>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est suscipit asperiores et! Minus debitis quasi sint perspiciatis nemo animi eveniet quas cupiditate a similique exercitationem culpa, ipsa libero fugit placeat?
+      </Header>
+
+      <Button text="Inscreva-se agora" />
+
+    </>
   );
 }
 
