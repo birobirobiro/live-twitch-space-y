@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: ${pixelToRem(24, 112, 50)};
-  width: 100vw;
+  width: pixelToRem(1440);
   height: 100vh;
 `;
 
