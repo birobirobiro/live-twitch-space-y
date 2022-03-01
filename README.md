@@ -7,7 +7,7 @@
   
   <img src="https://img.shields.io/github/forks/birobirobiro/live-twitch-space-y?label=forks&message=MIT&color=0B1E8A&labelColor=E85937" alt="Forks">
 
-  <img src="https://img.shields.io/github/stars/birobirobiro/birobirobiro/live-twitch-space-y?label=stars&message=MIT&color=0B1E8A&labelColor=E85937" alt="Stars">
+  <img src="https://img.shields.io/github/stars/birobirobiro/live-twitch-space-y?label=stars&message=MIT&color=0B1E8A&labelColor=E85937" alt="Stars">
 </p>
 
 # Desktop
