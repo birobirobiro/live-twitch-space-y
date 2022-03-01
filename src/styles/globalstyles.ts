@@ -1,16 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
-function pixelToRem(...values: number[]) {
-  return values
-    .reduce((acc, current) => (acc += current / 16 + `rem `), "")
-    .trim();
-}
+import pixelToRem from "../utils/pxToRem";
 
 export const GlobalStyles = createGlobalStyle`
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
  }
  html{
    @media(max-width: 1440px){
@@ -24,6 +21,7 @@ export const GlobalStyles = createGlobalStyle`
 body{
   font-family: "Heebo", sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--background);
  }
 
 :root {
@@ -46,8 +44,9 @@ body{
   --earth: #0FDD86;
   --saturn: #554AD7;
   --text: #FFF;
+  --background: #04032C;
   
-  /* Font */
+  /* Fonts */
     --font-display: 800 ${pixelToRem(62)}/${pixelToRem(97)} "Heebo", sans-serif;
 
     --font-heading-1: 700 ${pixelToRem(32)}/${pixelToRem(

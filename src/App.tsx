@@ -1,20 +1,47 @@
 import React from 'react';
 import { GlobalStyles } from './styles/globalstyles'
-import { Header } from './styles/styles'
+import { Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons } from './styles/styles'
+
 import Button from './components/Button'
+import Icon from './components/Icon'
 
 function App() {
   return (
-    <>
-      <GlobalStyles />
+    <Container>
+      <>
+        <GlobalStyles />
 
-      <Header>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est suscipit asperiores et! Minus debitis quasi sint perspiciatis nemo animi eveniet quas cupiditate a similique exercitationem culpa, ipsa libero fugit placeat?
-      </Header>
+        <Header>
+          <Logo />
+        </Header>
 
-      <Button text="Inscreva-se agora" />
+        <Main>
+          <FirstTitle>Finalmente é possível!</FirstTitle>
 
-    </>
+          <SecondTitle>Sua jornada para Marte começa aqui <span>.</span></SecondTitle>
+
+          <Subtitle>A primeira viagem para Marte estará disponivél apartir do dia 12/03/2028. Inscreva-se em nossa lista de espera.
+          </Subtitle>
+
+          <AstrounautIllustration />
+
+        </Main>
+
+        <DivButton>
+          <Button text="Inscreva-se agora" fullWidth />
+        </DivButton>
+
+
+        <DivIcons>
+          <Icon src="/images/icon-rocket.svg" txt="Foguetes com a mais alta tecnologia e conforto." alt="Rocket" />
+
+          <Icon src="/images/icon-flag.svg" txt="Mais de 100 missões consecutivas com sucesso." alt="Flag" />
+
+          <Icon src="/images/icon-telescope.svg" txt="Experiencia única
+e exclusiva." alt="Telescope" />
+        </DivIcons>
+      </>
+    </Container>
   );
 }
 
