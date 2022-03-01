@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="SpaceY" src=".github/cover.jpg">
+  <img alt="SpaceY" src=".github/Cover.jpg">
 </p>
 
 <p align="center">
