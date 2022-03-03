@@ -2,12 +2,29 @@ import styled from "styled-components";
 
 import pixelToRem from "../utils/pxToRem";
 
-export const Container = styled.div`
+interface GalleryFlexContainerProps {
+  flex?: "row" | "column";
+  width?: string;
+  margin?: string;
+  padding?: string;
+  alignItems?: "flex-start" | "flex-end" | "center" | "stretch";
+  justifyContent?:
+    | "flex-start"
+    | "flex-end"
+    | "center"
+    | "space-between"
+    | "space-around"
+    | "space-evenly";
+}
+
+export const Container = styled.div<GalleryFlexContainerProps>`
   display: flex;
-  flex-direction: column;
-  margin: ${pixelToRem(24, 112, 50)};
-  width: pixelToRem(1440);
-  height: 100vh;
+  flex-direction: ${(props) => props.flex};
+  width: ${(props) => props.width};
+  margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding};
+  align-items: ${(props) => props.alignItems};
+  justify-content: ${(props) => props.justifyContent};
 `;
 
 export const Header = styled.div`
@@ -28,9 +45,9 @@ export const Main = styled.div`
   padding-bottom: ${pixelToRem(32)};
 `;
 
-export const FirstTitle = styled.p`
+export const FirstTitle = styled.div`
   color: var(--sun);
-  font: var(--text-3);
+  font: var(--text-4);
   text-transform: uppercase;
   letter-spacing: ${pixelToRem(5)};
 `;
@@ -70,4 +87,51 @@ export const DivIcons = styled.div`
   justify-content: space-between;
   max-width: ${pixelToRem(1440)};
   align-items: center;
+`;
+
+export const SectionAbout = styled.div<GalleryFlexContainerProps>`
+  display: flex;
+  justify-content: center;
+  background: url("/images/stars.jpg"), no-repeat;
+  flex-direction: ${(props) => props.flex};
+
+  //REMOVERRRRR
+  padding-bottom: ${pixelToRem(500)};
+  //REMOVERRRRR
+`;
+
+export const ImageMars = styled.image`
+  width: ${pixelToRem(621)};
+  height: ${pixelToRem(621)};
+  background-image: url("/images/mars.svg");
+`;
+
+export const DivAboutMars = styled.div<GalleryFlexContainerProps>`
+  max-width: ${pixelToRem(603)};
+  padding-top: ${pixelToRem(138)};
+  margin: ${(props) => props.margin};
+`;
+
+export const SecondSubTitle = styled.p`
+  font: var(--font-heading-1);
+  color: var(--text);
+  padding-top: ${pixelToRem(14)};
+`;
+
+export const TextMars = styled.p`
+  font: var(--text-1);
+  color: var(--gray-05);
+  padding-top: ${pixelToRem(26)};
+`;
+
+export const GalleryContent = styled.div<GalleryFlexContainerProps>`
+  display: flex;
+  flex-direction: ${(props) => props.flex};
+`;
+
+export const ContainerAbout = styled.div<GalleryFlexContainerProps>`
+  display: flex;
+  flex-direction: ${(props) => props.flex};
+  align-items: ${(props) => props.alignItems};
+  justify-content: ${(props) => props.justifyContent};
 `;

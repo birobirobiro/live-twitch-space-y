@@ -37,6 +37,7 @@ body{
   --saturn: #554AD7;
   --text: #FFF;
   --background: #04032C;
+  --background-section: linear-gradient(180deg, #040327 0%, #0D0E13 24.49%);
   
   /* Fonts */
     --font-display: 800 ${pixelToRem(62)}/${pixelToRem(97)} "Heebo", sans-serif;
@@ -52,7 +53,6 @@ body{
     --font-heading-3: 400 ${pixelToRem(20)}/${pixelToRem(
   24
 )} "Heebo", sans-serif;
-}
 
 --text-4: 500 ${pixelToRem(18)}/${pixelToRem(32)} "Heebo", sans-serif;
 --text-3: 500 ${pixelToRem(18)}/${pixelToRem(24)} "Heebo", sans-serif;
@@ -60,4 +60,4 @@ body{
 --text-1: 400 ${pixelToRem(16)}/${pixelToRem(24)} "Heebo", sans-serif;
 --text-0: 400 ${pixelToRem(14)}/${pixelToRem(24)} "Heebo", sans-serif;
 
-`;
+}`;

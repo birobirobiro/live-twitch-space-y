@@ -1,14 +1,17 @@
 import React from 'react';
 import { GlobalStyles } from './styles/globalstyles'
-import { Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons } from './styles/styles'
+import {
+  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout
+} from './styles/styles'
 
 import Button from './components/Button'
 import Icon from './components/Icon'
+import pixelToRem from './utils/pxToRem'
 
 function App() {
   return (
-    <Container>
-      <>
+    <>
+      <Container flex='column' margin={pixelToRem(24, 112, 50)}>
         <GlobalStyles />
 
         <Header>
@@ -40,8 +43,37 @@ function App() {
           <Icon src="/images/icon-telescope.svg" txt="Experiencia única
 e exclusiva." alt="Telescope" />
         </DivIcons>
-      </>
-    </Container>
+
+
+
+      </Container>
+
+      <SectionAbout flex='column'>
+        <Container>
+          <ContainerAbout>
+            <ImageMars />
+
+
+            <DivAboutMars >
+              <FirstTitle>Por que Marte?</FirstTitle>
+
+              <SecondSubTitle>Sobre o planeta vermelho</SecondSubTitle>
+
+              <TextMars>A uma distância média de 140 milhões de milhas, Marte é um dos vizinhos habitáveis ​​mais próximos da Terra. Marte está mais ou menos a metade da distância da Terra do Sol, então ainda tem luz solar decente. Está um pouco frio, mas podemos esquentar. Sua atmosfera é composta principalmente de CO2 com um pouco de nitrogênio e argônio e alguns outros oligoelementos, o que significa que podemos cultivar plantas em Marte apenas comprimindo a atmosfera.</TextMars>
+
+              <TextMars>A gravidade em Marte é cerca de 38% da da Terra, então você seria capaz de levantar coisas pesadas e dar voltas. Além disso, o dia está notavelmente próximo ao da Terra.</TextMars>
+            </DivAboutMars>
+
+          </ContainerAbout>
+        </Container>
+
+        <GalleryContent flex={"column"}>
+          <Logo />
+        </GalleryContent>
+      </SectionAbout>
+
+    </>
+
   );
 }
 
