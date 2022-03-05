@@ -156,8 +156,38 @@ export const TextLogo = styled.p`
 `;
 
 export const TextSubscribe = styled.p`
+  display: flex;
+  justify-content: flex-start;
+  margin-top: ${pixelToRem(20)};
+  max-width: 42%;
+  width: 100%;
   font: var(--text-3);
   color: var(--mars-light);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
   cursor: pointer;
-  padding-top: ${pixelToRem(20)};
+
+  transition: color 0.275s;
+  &:hover {
+    color: var(--mars);
+  }
+  &:active {
+    color: var(--mars-dark);
+  }
+
+  /* 4K - 2560px */
+  @media only screen and (max-width: 2560px) {}
+  /* Laptop L - 1440px */
+  @media only screen and (max-width: 1440px) {}
+  /* Laptop - 1024px */
+  @media only screen and (max-width: 1024px) {}
+  /* Tablet - 768px */
+  @media only screen and (max-width: 768px) {}
+    /* Mobile L - 425px */
+  @media only screen and (max-width: 425px) {}
+  /* Mobile M - 375px */
+  @media only screen and (max-width: 375px) {}
+  /* Mobile S - 320px */
+  @media only screen and (max-width: 320px) {}
 `;
