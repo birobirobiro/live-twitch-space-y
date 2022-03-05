@@ -28,7 +28,7 @@ body{
   --gray-04: #898A93;
   --gray-05: #D5D5DB;
   --mars: #E85937;
-  --mars-ligth: #FF8C70;
+  --mars-light: #FF8C70;
   --mars-dark: #CF3F1D;
   --sun: #F5D15F;
   --uranus: #24FFE9;

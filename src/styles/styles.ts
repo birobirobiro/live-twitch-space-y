@@ -32,7 +32,7 @@ export const Header = styled.div`
   padding-bottom: ${pixelToRem(95)};
 `;
 
-export const Logo = styled.image`
+export const Logo = styled.image<GalleryFlexContainerProps>`
   width: ${pixelToRem(201)};
   height: ${pixelToRem(41)};
   background-image: url("/images/logo-space-y.svg");
@@ -87,29 +87,27 @@ export const DivIcons = styled.div`
   justify-content: space-between;
   max-width: ${pixelToRem(1440)};
   align-items: center;
+  width: 100%;
 `;
 
 export const SectionAbout = styled.div<GalleryFlexContainerProps>`
   display: flex;
   justify-content: center;
-  background: url("/images/stars.jpg"), no-repeat;
+  background: url("/images/stars.jpg") no-repeat;
+  background-size: cover;
   flex-direction: ${(props) => props.flex};
-
-  //REMOVERRRRR
-  padding-bottom: ${pixelToRem(500)};
-  //REMOVERRRRR
 `;
 
 export const ImageMars = styled.image`
   width: ${pixelToRem(621)};
   height: ${pixelToRem(621)};
   background-image: url("/images/mars.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 `;
 
 export const DivAboutMars = styled.div<GalleryFlexContainerProps>`
   max-width: ${pixelToRem(603)};
-  padding-top: ${pixelToRem(138)};
-  margin: ${(props) => props.margin};
 `;
 
 export const SecondSubTitle = styled.p`
@@ -127,11 +125,39 @@ export const TextMars = styled.p`
 export const GalleryContent = styled.div<GalleryFlexContainerProps>`
   display: flex;
   flex-direction: ${(props) => props.flex};
+  margin: ${pixelToRem(150, 100, 157, 300)};
+  max-width: ${pixelToRem(500)};
 `;
+
+export const DivLogo = styled.div<GalleryFlexContainerProps>`
+  max-width: ${pixelToRem(350)};
+`;
+
+export const DivLogoSpaceY = styled.div`
+  display: flex;
+  padding-bottom: ${pixelToRem(13)};
+`;
+
+export const Gallery = styled.div``;
 
 export const ContainerAbout = styled.div<GalleryFlexContainerProps>`
   display: flex;
   flex-direction: ${(props) => props.flex};
   align-items: ${(props) => props.alignItems};
   justify-content: ${(props) => props.justifyContent};
+  width: ${(props) => props.width};
+  margin-top: ${pixelToRem(180)};
+  gap: ${pixelToRem(200)};
+`;
+
+export const TextLogo = styled.p`
+  font: var(--font-heading-1);
+  color: var(--text);
+`;
+
+export const TextSubscribe = styled.p`
+  font: var(--text-3);
+  color: var(--mars-light);
+  cursor: pointer;
+  padding-top: ${pixelToRem(20)};
 `;

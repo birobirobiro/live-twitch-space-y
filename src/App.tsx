@@ -1,7 +1,7 @@
 import React from 'react';
 import { GlobalStyles } from './styles/globalstyles'
 import {
-  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout
+  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, Gallery, DivLogoSpaceY
 } from './styles/styles'
 
 import Button from './components/Button'
@@ -49,8 +49,8 @@ e exclusiva." alt="Telescope" />
       </Container>
 
       <SectionAbout flex='column'>
-        <Container>
-          <ContainerAbout>
+        <Container width='100%'>
+          <ContainerAbout width="100%" alignItems='center' justifyContent='center'>
             <ImageMars />
 
 
@@ -67,8 +67,21 @@ e exclusiva." alt="Telescope" />
           </ContainerAbout>
         </Container>
 
-        <GalleryContent flex={"column"}>
-          <Logo />
+        <GalleryContent flex={"row"}>
+
+          <DivLogo>
+            <DivLogoSpaceY>
+              <Logo />
+            </DivLogoSpaceY>
+
+            <TextLogo>O caminho para tornar a humanidade multiplanetária<span>.</span></TextLogo>
+
+            <TextSubscribe>
+              Inscreva-se agora
+            </TextSubscribe>
+          </DivLogo>
+
+          <Gallery />
         </GalleryContent>
       </SectionAbout>
 
