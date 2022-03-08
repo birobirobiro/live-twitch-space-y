@@ -76,12 +76,12 @@ export const Subtitle = styled.p`
 `;
 
 export const AstrounautIllustration = styled.image`
-  width: ${pixelToRem(600)};
+ width: ${pixelToRem(472)};
   height: ${pixelToRem(600)};
   position: absolute;
   background-image: url("/images/home-mars-right.svg");
   background-repeat: no-repeat;
-  right: ${pixelToRem(-130)};
+  right: 0;
   top: ${pixelToRem(10)};
 `;
 
