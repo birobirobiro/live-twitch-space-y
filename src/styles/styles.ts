@@ -17,6 +17,14 @@ interface GalleryFlexContainerProps {
     | "space-evenly";
 }
 
+interface ImageGalleryProps {
+  width?: number;
+  height?: number;
+  src: string;
+  borderRadius?: number;
+  objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
+}
+
 export const Container = styled.div<GalleryFlexContainerProps>`
   display: flex;
   flex-direction: ${(props) => props.flex};
@@ -126,7 +134,6 @@ export const GalleryContent = styled.div<GalleryFlexContainerProps>`
   display: flex;
   flex-direction: ${(props) => props.flex};
   margin: ${pixelToRem(150, 100, 157, 300)};
-  max-width: ${pixelToRem(500)};
 `;
 
 export const DivLogo = styled.div<GalleryFlexContainerProps>`
@@ -138,7 +145,22 @@ export const DivLogoSpaceY = styled.div`
   padding-bottom: ${pixelToRem(13)};
 `;
 
-export const Gallery = styled.div``;
+export const Gallery = styled.div`
+  display: flex;
+  background: red;
+`;
+
+export const ContainerImageGallery = styled.div`
+  display: flex;
+`;
+
+export const ImageGallery = styled.img<ImageGalleryProps>`
+  width: ${({ width }) => width && pixelToRem(width)};
+  height: ${({ height }) => height && pixelToRem(height)};
+  border-radius: ${({ borderRadius }) =>
+    borderRadius && pixelToRem(borderRadius)};
+  object-fit: ${({ objectFit }) => objectFit};
+`;
 
 export const ContainerAbout = styled.div<GalleryFlexContainerProps>`
   display: flex;

@@ -1,12 +1,17 @@
 import React from 'react';
 import { GlobalStyles } from './styles/globalstyles'
 import {
-  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, Gallery, DivLogoSpaceY
+  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, Gallery, DivLogoSpaceY, ContainerImageGallery, ImageGallery
 } from './styles/styles'
 
 import Button from './components/Button'
 import Icon from './components/Icon'
 import pixelToRem from './utils/pxToRem'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
+import 'swiper/css';
+import "swiper/css/navigation";
 
 function App() {
   return (
@@ -67,7 +72,7 @@ e exclusiva." alt="Telescope" />
           </ContainerAbout>
         </Container>
 
-        <GalleryContent flex={"row"}>
+        <GalleryContent >
 
           <DivLogo>
             <DivLogoSpaceY>
@@ -81,9 +86,49 @@ e exclusiva." alt="Telescope" />
             </TextSubscribe>
           </DivLogo>
 
-          <Gallery />
+          <Gallery>
+
+
+          </Gallery>
         </GalleryContent>
+
       </SectionAbout>
+
+      <Swiper width={100} spaceBetween={10} slidesPerView={3} navigation={true} modules={[Navigation]}>
+        <SwiperSlide>
+          <ImageGallery width={500} src="/images/gallery-1.jpg" borderRadius={10} />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ImageGallery width={500} src="/images/gallery-1.jpg" borderRadius={10} />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ImageGallery width={500} src="/images/gallery-1.jpg" borderRadius={10} />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ImageGallery width={500} src="/images/gallery-1.jpg" borderRadius={10} />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ImageGallery width={500} src="/images/gallery-1.jpg" borderRadius={10} />
+        </SwiperSlide>
+
+      </Swiper>
+
+      {/* <Swiper spaceBetween={50} slidesPerView={3} onSlideChange={() => console.log('slide change')} onSwiper={(swiper) => console.log(swiper)} >
+        <SwiperSlide style={{ background: "red" }}>Slide 1</SwiperSlide>
+        <SwiperSlide style={{ background: "red" }}
+
+        >Slide 2</SwiperSlide>
+        <SwiperSlide style={{ background: "red" }}
+
+        >Slide 3</SwiperSlide>
+        <SwiperSlide style={{ background: "red" }}
+
+        >Slide 4</SwiperSlide>
+      </Swiper> */}
 
     </>
 
