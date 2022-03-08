@@ -134,24 +134,23 @@ export const GalleryContent = styled.div<GalleryFlexContainerProps>`
   display: flex;
   flex-direction: ${(props) => props.flex};
   margin: ${pixelToRem(150, 100, 157, 300)};
+
+  & .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: ${pixelToRem(32)};
+    color: var(--gray-05);
+    font-weight: bolder;
+  }
 `;
 
 export const DivLogo = styled.div<GalleryFlexContainerProps>`
   max-width: ${pixelToRem(350)};
+  margin-right: ${pixelToRem(30)};
 `;
 
 export const DivLogoSpaceY = styled.div`
   display: flex;
   padding-bottom: ${pixelToRem(13)};
-`;
-
-export const Gallery = styled.div`
-  display: flex;
-  background: red;
-`;
-
-export const ContainerImageGallery = styled.div`
-  display: flex;
 `;
 
 export const ImageGallery = styled.img<ImageGalleryProps>`
