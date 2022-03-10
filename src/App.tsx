@@ -1,19 +1,18 @@
 import React from 'react';
 import { GlobalStyles } from './styles/globalstyles'
 import {
-  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, DivLogoSpaceY, ImageGallery
+  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, DivLogoSpaceY,
 } from './styles/styles'
+
+import { ArrowRight, ArrowLeft } from "./components/Gallery/styles"
+import Gallery from './components/Gallery'
 
 import Button from './components/Button'
 import Icon from './components/Icon'
 import pixelToRem from './utils/pxToRem'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
-import 'swiper/css';
-import "swiper/css/navigation";
-
 function App() {
+
   return (
     <>
       <Container flex='column' margin={pixelToRem(24, 112, 50)}>
@@ -86,32 +85,11 @@ e exclusiva." alt="Telescope" />
             </TextSubscribe>
           </DivLogo>
 
-          <Swiper loop={true} style={{ padding: "0 47px" }} navigation={true} spaceBetween={30} slidesPerView={3} modules={[Navigation]}>
-            <SwiperSlide>
-              <ImageGallery width={350} src="/images/gallery-1.jpg" borderRadius={10} />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <ImageGallery width={350} src="/images/gallery-2.jpg" borderRadius={10} />
-            </SwiperSlide>
+          <ArrowLeft />
+          <Gallery />
+          <ArrowRight />
 
 
-            <SwiperSlide>
-              <ImageGallery width={350} src="/images/gallery-3.jpg" borderRadius={10} />
-            </SwiperSlide>
-
-
-            <SwiperSlide>
-              <ImageGallery width={350} src="/images/gallery-1.jpg" borderRadius={10} />
-            </SwiperSlide>
-
-
-            <SwiperSlide>
-              <ImageGallery width={350} src="/images/gallery-1.jpg" borderRadius={10} />
-            </SwiperSlide>
-
-
-          </Swiper>
         </GalleryContent>
 
       </SectionAbout>

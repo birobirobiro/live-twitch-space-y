@@ -76,7 +76,7 @@ export const Subtitle = styled.p`
 `;
 
 export const AstrounautIllustration = styled.image`
- width: ${pixelToRem(472)};
+  width: ${pixelToRem(472)};
   height: ${pixelToRem(600)};
   position: absolute;
   background-image: url("/images/home-mars-right.svg");
@@ -112,6 +112,7 @@ export const ImageMars = styled.image`
   background-image: url("/images/mars.svg");
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: center;
 `;
 
 export const DivAboutMars = styled.div<GalleryFlexContainerProps>`
@@ -134,13 +135,6 @@ export const GalleryContent = styled.div<GalleryFlexContainerProps>`
   display: flex;
   flex-direction: ${(props) => props.flex};
   margin: ${pixelToRem(150, 100, 157, 300)};
-
-  & .swiper-button-prev:after,
-  .swiper-button-next:after {
-    font-size: ${pixelToRem(32)};
-    color: var(--gray-05);
-    font-weight: bolder;
-  }
 `;
 
 export const DivLogo = styled.div<GalleryFlexContainerProps>`
