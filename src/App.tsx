@@ -1,11 +1,14 @@
 import React from 'react';
 import { GlobalStyles } from './styles/globalstyles'
 import {
-  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, DivLogoSpaceY,
+  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, DivLogoSpaceY, SectionForm,
+  DivForm, IconForm, TitleForm, SubtitleForm, RocketImage, DivInputCheckbox, InputCheckbox, TextCheckbox
 } from './styles/styles'
 
 import { ArrowRight, ArrowLeft } from "./components/Gallery/styles"
 import Gallery from './components/Gallery'
+
+import Form from './components/Form'
 
 import Button from './components/Button'
 import Icon from './components/Icon'
@@ -93,6 +96,36 @@ e exclusiva." alt="Telescope" />
         </GalleryContent>
 
       </SectionAbout>
+
+      <SectionForm>
+        <DivForm>
+          <IconForm />
+
+          <TitleForm>
+            Garanta sua vaga para a primeira viagem
+          </TitleForm>
+
+          <SubtitleForm>
+            Preencha os campos abaixo para entrar na lista de espera
+          </SubtitleForm>
+
+          <Form text='Seu nome' />
+          <Form text='E-mail' />
+          <Form text='Telefone' />
+
+          <DivInputCheckbox>
+            <InputCheckbox type="checkbox" />
+
+            <TextCheckbox>Concordo em receber comunicações</TextCheckbox>
+          </DivInputCheckbox>
+
+          <Button text="Garantir minha vaga" fullWidth />
+
+        </DivForm>
+
+      </SectionForm>
+
+      <RocketImage />
 
     </>
 
