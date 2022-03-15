@@ -2,7 +2,9 @@ import React from 'react';
 import { GlobalStyles } from './styles/globalstyles'
 import {
   Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, DivLogoSpaceY, SectionForm,
-  DivForm, IconForm, TitleForm, SubtitleForm, RocketImage, DivInputCheckbox, InputCheckbox, TextCheckbox
+  DivForm, IconForm, TitleForm, SubtitleForm, RocketImage, DivInputCheckbox, InputCheckbox, TextCheckbox, DivRocketImage, SectionFooter, DivImageSmoke, DivFooterBottom, DivSocial, DivFooterMenu, ContainerForm
+
+
 } from './styles/styles'
 
 import { ArrowRight, ArrowLeft } from "./components/Gallery/styles"
@@ -98,34 +100,69 @@ e exclusiva." alt="Telescope" />
       </SectionAbout>
 
       <SectionForm>
-        <DivForm>
-          <IconForm />
+        <ContainerForm>
+          <DivForm>
+            <IconForm />
 
-          <TitleForm>
-            Garanta sua vaga para a primeira viagem
-          </TitleForm>
+            <TitleForm>
+              Garanta sua vaga para a primeira viagem
+            </TitleForm>
 
-          <SubtitleForm>
-            Preencha os campos abaixo para entrar na lista de espera
-          </SubtitleForm>
+            <SubtitleForm>
+              Preencha os campos abaixo para entrar na lista de espera
+            </SubtitleForm>
 
-          <Form text='Seu nome' />
-          <Form text='E-mail' />
-          <Form text='Telefone' />
+            <Form type="text" text='Seu nome' />
+            <Form type="email" text='E-mail' />
+            <Form type="number" text='Telefone' />
 
-          <DivInputCheckbox>
-            <InputCheckbox type="checkbox" />
+            <DivInputCheckbox>
+              <InputCheckbox type="checkbox" />
 
-            <TextCheckbox>Concordo em receber comunicações</TextCheckbox>
-          </DivInputCheckbox>
+              <TextCheckbox>Concordo em receber comunicações</TextCheckbox>
+            </DivInputCheckbox>
 
-          <Button text="Garantir minha vaga" fullWidth />
+            <Button text="Garantir minha vaga" fullWidth />
 
-        </DivForm>
+          </DivForm>
+
+          <DivRocketImage>
+            <RocketImage>
+              <img src="/images/rocket.svg" alt="Rocket" />
+            </RocketImage>
+          </DivRocketImage>
+        </ContainerForm>
+
+        <SectionFooter>
+          <DivImageSmoke>
+            <img src="/images/smoke.svg" alt="" />
+          </DivImageSmoke>
+
+
+          <DivFooterBottom>
+            <DivLogoSpaceY>
+              <Logo />
+            </DivLogoSpaceY>
+
+            <DivSocial>
+              <img src="/images/instagram.svg" alt="" />
+              <img src="/images/linkedin.svg" alt="" />
+              <img src="/images/facebook.svg" alt="" />
+            </DivSocial>
+
+            <DivFooterMenu>
+              <ul>
+                <a href="#"><li>Início</li></a>
+                <a href="#"><li>Sobre nós</li></a>
+                <a href="#"><li>Missões</li></a>
+                <a href="#"><li>Contato</li></a>
+              </ul>
+            </DivFooterMenu>
+          </DivFooterBottom>
+        </SectionFooter>
 
       </SectionForm>
 
-      <RocketImage />
 
     </>
 
