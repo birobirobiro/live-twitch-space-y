@@ -18,4 +18,5 @@ export const Input = styled.input`
   border: 1px solid var(--gray-05);
   border-radius: ${pixelToRem(6)};
   background: var(--background-form);
+  color: var(--text);
 `;
