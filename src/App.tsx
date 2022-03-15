@@ -152,10 +152,10 @@ e exclusiva." alt="Telescope" />
 
             <DivFooterMenu>
               <ul>
-                <li><a>Início</a></li>
-                <li><a>Sobre nós</a></li>
-                <li><a>Missões</a></li>
-                <li><a>Contato</a></li>
+                <li><a href="/">Início</a></li>
+                <li><a href="/">Sobre nós</a></li>
+                <li><a href="/">Missões</a></li>
+                <li><a href="/">Contato</a></li>
               </ul>
             </DivFooterMenu>
           </DivFooterBottom>
