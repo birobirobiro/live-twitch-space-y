@@ -67,7 +67,7 @@ export const Main = styled.div`
   padding-bottom: ${pixelToRem(103)};
 
   @media ${device.mobile} {
-    max-width: ${pixelToRem(341)};
+    max-width: 100vw;
     align-items: center;
     justify-content: center;
   }
@@ -124,7 +124,8 @@ export const AstrounautIllustration = styled.image`
   @media ${device.mobile} {
     position: relative;
     order: 4;
-    left: ${pixelToRem(60)};
+    width: ${pixelToRem(307)};
+    left: ${pixelToRem(55)};
   }
 `;
 
@@ -149,6 +150,7 @@ export const DivIcons = styled.div`
     text-align: center;
     gap: ${pixelToRem(64)};
     padding-bottom: ${pixelToRem(72)};
+    max-width: ${pixelToRem(222)};
 
     & image {
       margin: 0 auto;

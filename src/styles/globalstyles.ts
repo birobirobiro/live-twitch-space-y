@@ -15,7 +15,7 @@ body{
   font-family: "Heebo", sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color: var(--background);
-
+  
   @media ${device.mobile} {
     background: url("/images/stars-mobile.png");
   }
