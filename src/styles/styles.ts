@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
 import pixelToRem from "../utils/pxToRem";
+import { device } from "./responsive";
 
 interface GalleryFlexContainerProps {
   flex?: "row" | "column";
@@ -33,24 +33,44 @@ export const Container = styled.div<GalleryFlexContainerProps>`
   padding: ${(props) => props.padding};
   align-items: ${(props) => props.alignItems};
   justify-content: ${(props) => props.justifyContent};
+
+  @media ${device.mobile} {
+    margin: ${pixelToRem(17)};
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Header = styled.div`
   display: flex;
   padding-bottom: ${pixelToRem(95)};
+
+  @media ${device.mobile} {
+    padding-bottom: ${pixelToRem(78)};
+  }
 `;
 
 export const Logo = styled.image<GalleryFlexContainerProps>`
   width: ${pixelToRem(201)};
   height: ${pixelToRem(41)};
   background-image: url("/images/logo-space-y.svg");
+
+  @media ${device.mobile} {
+    height: ${pixelToRem(30)};
+  }
 `;
 
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
   max-width: ${pixelToRem(815)};
-  padding-bottom: ${pixelToRem(32)};
+  padding-bottom: ${pixelToRem(103)};
+
+  @media ${device.mobile} {
+    max-width: ${pixelToRem(341)};
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const FirstTitle = styled.div`
@@ -58,11 +78,22 @@ export const FirstTitle = styled.div`
   font: var(--text-4);
   text-transform: uppercase;
   letter-spacing: ${pixelToRem(5)};
+
+  @media ${device.mobile} {
+    font: var(--font-mobile-text-1);
+    letter-spacing: ${pixelToRem(5)};
+    padding-bottom: ${pixelToRem(11)};
+  }
 `;
 
 export const SecondTitle = styled.p`
   color: var(--text);
   font: var(--font-display);
+
+  @media ${device.mobile} {
+    font: var(--font-mobile-heading-1);
+    text-align: center;
+  }
 
   span {
     color: var(--mars);
@@ -73,6 +104,12 @@ export const Subtitle = styled.p`
   color: var(--gray-05);
   font: var(--font-heading-3);
   max-width: ${pixelToRem(728)};
+
+  @media ${device.mobile} {
+    padding: ${pixelToRem(16, 0, 32, 0)};
+    text-align: center;
+    max-width: ${pixelToRem(307)};
+  }
 `;
 
 export const AstrounautIllustration = styled.image`
@@ -83,11 +120,21 @@ export const AstrounautIllustration = styled.image`
   background-repeat: no-repeat;
   right: 0;
   top: ${pixelToRem(10)};
+
+  @media ${device.mobile} {
+    position: relative;
+    order: 4;
+    left: ${pixelToRem(60)};
+  }
 `;
 
 export const DivButton = styled.div`
   width: ${pixelToRem(264)};
-  padding-bottom: ${pixelToRem(135)};
+  padding-top: ${pixelToRem(32)};
+
+  @media ${device.mobile} {
+    padding-bottom: ${pixelToRem(63)};
+  }
 `;
 
 export const DivIcons = styled.div`
@@ -96,6 +143,17 @@ export const DivIcons = styled.div`
   max-width: ${pixelToRem(1440)};
   align-items: center;
   width: 100%;
+
+  @media ${device.mobile} {
+    flex-direction: column;
+    text-align: center;
+    gap: ${pixelToRem(64)};
+    padding-bottom: ${pixelToRem(72)};
+
+    & image {
+      margin: 0 auto;
+    }
+  }
 `;
 
 export const SectionAbout = styled.div<GalleryFlexContainerProps>`
@@ -104,6 +162,10 @@ export const SectionAbout = styled.div<GalleryFlexContainerProps>`
   background: url("/images/stars.jpg") no-repeat;
   background-size: cover;
   flex-direction: ${(props) => props.flex};
+
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 
 export const ImageMars = styled.image`
@@ -192,6 +254,10 @@ export const SectionForm = styled.div`
   background: url("/images/background-stars-form.jpg") no-repeat;
   background-size: cover;
   justify-content: space-around;
+
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 
 export const DivForm = styled.div`
@@ -260,6 +326,10 @@ export const TextCheckbox = styled.p`
 export const SectionFooter = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 
 export const DivImageSmoke = styled.div`

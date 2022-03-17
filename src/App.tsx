@@ -37,12 +37,12 @@ function App() {
 
           <AstrounautIllustration />
 
+
+          <DivButton>
+            <Button text="Inscreva-se agora" fullWidth />
+          </DivButton>
+
         </Main>
-
-        <DivButton>
-          <Button text="Inscreva-se agora" fullWidth />
-        </DivButton>
-
 
         <DivIcons>
           <Icon src="/images/icon-rocket.svg" txt="Foguetes com a mais alta tecnologia e conforto." alt="Rocket" />
