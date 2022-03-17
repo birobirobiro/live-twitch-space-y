@@ -16,7 +16,11 @@ body{
   -webkit-font-smoothing: antialiased;
   background-color: var(--background);
   
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
+    background: url("/images/stars-mobile.png");
+  }
+
+  @media ${device.tablet} {
     background: url("/images/stars-mobile.png");
   }
  }

@@ -34,7 +34,7 @@ export const Container = styled.div<GalleryFlexContainerProps>`
   align-items: ${(props) => props.alignItems};
   justify-content: ${(props) => props.justifyContent};
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     margin: ${pixelToRem(17)};
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@ export const Header = styled.div`
   display: flex;
   padding-bottom: ${pixelToRem(95)};
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     padding-bottom: ${pixelToRem(78)};
   }
 `;
@@ -55,7 +55,7 @@ export const Logo = styled.image<GalleryFlexContainerProps>`
   height: ${pixelToRem(41)};
   background-image: url("/images/logo-space-y.svg");
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     height: ${pixelToRem(30)};
   }
 `;
@@ -66,7 +66,7 @@ export const Main = styled.div`
   max-width: ${pixelToRem(815)};
   padding-bottom: ${pixelToRem(103)};
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     max-width: 100vw;
     align-items: center;
     justify-content: center;
@@ -79,7 +79,7 @@ export const FirstTitle = styled.div`
   text-transform: uppercase;
   letter-spacing: ${pixelToRem(5)};
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     font: var(--font-mobile-text-1);
     letter-spacing: ${pixelToRem(5)};
     padding-bottom: ${pixelToRem(11)};
@@ -90,7 +90,7 @@ export const SecondTitle = styled.p`
   color: var(--text);
   font: var(--font-display);
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     font: var(--font-mobile-heading-1);
     text-align: center;
   }
@@ -105,7 +105,7 @@ export const Subtitle = styled.p`
   font: var(--font-heading-3);
   max-width: ${pixelToRem(728)};
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     padding: ${pixelToRem(16, 0, 32, 0)};
     text-align: center;
     max-width: ${pixelToRem(307)};
@@ -121,11 +121,19 @@ export const AstrounautIllustration = styled.image`
   right: 0;
   top: ${pixelToRem(10)};
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     position: relative;
     order: 4;
     width: ${pixelToRem(307)};
     left: ${pixelToRem(55)};
+  }
+
+  @media (max-width: ${pixelToRem(1200)}) {
+    position: relative;
+    order: 4;
+    width: ${pixelToRem(472)};
+    height: ${pixelToRem(600)};
+    left: 0;
   }
 `;
 
@@ -133,7 +141,7 @@ export const DivButton = styled.div`
   width: ${pixelToRem(264)};
   padding-top: ${pixelToRem(32)};
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     padding-bottom: ${pixelToRem(63)};
   }
 `;
@@ -145,7 +153,7 @@ export const DivIcons = styled.div`
   align-items: center;
   width: 100%;
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     flex-direction: column;
     text-align: center;
     gap: ${pixelToRem(64)};
@@ -165,7 +173,7 @@ export const SectionAbout = styled.div<GalleryFlexContainerProps>`
   background-size: cover;
   flex-direction: ${(props) => props.flex};
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     display: none;
   }
 `;
@@ -257,7 +265,7 @@ export const SectionForm = styled.div`
   background-size: cover;
   justify-content: space-around;
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     display: none;
   }
 `;
@@ -329,7 +337,7 @@ export const SectionFooter = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media ${device.mobile} {
+  @media ${device.mobileL} {
     display: none;
   }
 `;
