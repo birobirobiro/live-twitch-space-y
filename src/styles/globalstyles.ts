@@ -16,7 +16,7 @@ body{
   -webkit-font-smoothing: antialiased;
   background-color: var(--background);
   
-  @media ${device.mobileL} {
+  @media ${device.mobile} {
     background: url("/images/stars-mobile.png");
   }
 
