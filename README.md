@@ -32,6 +32,7 @@ This project was developed using the following technologies:
 
 - [ReactJS](https://reactjs.org/)
 - [Styled Components](https://styled-components.com/)
+- [Framer Motion](https://framer.com/motion/)
 
 ## 🚀 Getting started
 
