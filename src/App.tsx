@@ -1,5 +1,4 @@
 import { GlobalStyles } from './styles/globalstyles'
-import { motion } from "framer-motion"
 
 import {
   Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, DivLogoSpaceY, SectionForm,
