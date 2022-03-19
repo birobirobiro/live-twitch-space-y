@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import pixelToRem from "../utils/pxToRem";
 import { device } from "./responsive";
+import { motion } from "framer-motion";
 
 interface GalleryFlexContainerProps {
   flex?: "row" | "column";
@@ -146,7 +147,7 @@ export const DivButton = styled.div`
   }
 `;
 
-export const DivIcons = styled.div`
+export const DivIcons = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   max-width: ${pixelToRem(1440)};
@@ -178,7 +179,7 @@ export const SectionAbout = styled.div<GalleryFlexContainerProps>`
   }
 `;
 
-export const ImageMars = styled.image`
+export const ImageMars = styled(motion.image)`
   width: ${pixelToRem(621)};
   height: ${pixelToRem(621)};
   background-image: url("/images/mars.svg");
@@ -187,7 +188,7 @@ export const ImageMars = styled.image`
   background-position: center;
 `;
 
-export const DivAboutMars = styled.div<GalleryFlexContainerProps>`
+export const DivAboutMars = styled(motion.div)<GalleryFlexContainerProps>`
   max-width: ${pixelToRem(603)};
 `;
 
@@ -209,7 +210,7 @@ export const GalleryContent = styled.div<GalleryFlexContainerProps>`
   margin: ${pixelToRem(150, 100, 157, 300)};
 `;
 
-export const DivLogo = styled.div<GalleryFlexContainerProps>`
+export const DivLogo = styled(motion.div)<GalleryFlexContainerProps>`
   max-width: ${pixelToRem(350)};
   margin-right: ${pixelToRem(30)};
 `;
@@ -242,7 +243,7 @@ export const TextLogo = styled.p`
   color: var(--text);
 `;
 
-export const TextSubscribe = styled.p`
+export const TextSubscribe = styled(motion.p)`
   font: var(--text-3);
   color: var(--mars-light);
   cursor: pointer;
@@ -270,7 +271,7 @@ export const SectionForm = styled.div`
   }
 `;
 
-export const DivForm = styled.div`
+export const DivForm = styled(motion.div)`
   background: var(--background-form);
   border-radius: ${pixelToRem(20)};
   align-items: center;
@@ -296,11 +297,11 @@ export const SubtitleForm = styled.div`
   max-width: ${pixelToRem(308)};
 `;
 
-export const DivRocketImage = styled.div`
+export const DivRocketImage = styled(motion.div)`
   display: flex;
 `;
 
-export const RocketImage = styled.image`
+export const RocketImage = styled(motion.image)`
   width: ${pixelToRem(980)};
   height: ${pixelToRem(980)};
 `;
@@ -342,7 +343,7 @@ export const SectionFooter = styled.div`
   }
 `;
 
-export const DivImageSmoke = styled.div`
+export const DivImageSmoke = styled(motion.div)`
   width: 100%;
 
   & img {

@@ -1,19 +1,17 @@
-import React from 'react';
 import { GlobalStyles } from './styles/globalstyles'
+import { motion } from "framer-motion"
+
 import {
   Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, ContainerAbout, TextLogo, DivLogo, TextSubscribe, DivLogoSpaceY, SectionForm,
   DivForm, IconForm, TitleForm, SubtitleForm, RocketImage, DivInputCheckbox, InputCheckbox, TextCheckbox, DivRocketImage, SectionFooter, DivImageSmoke, DivFooterBottom, DivSocial, DivFooterMenu, ContainerForm
-
-
 } from './styles/styles'
 
 import { ArrowRight, ArrowLeft } from "./components/Gallery/styles"
-import Gallery from './components/Gallery'
 
-import Form from './components/Form'
-
-import Button from './components/Button'
 import Icon from './components/Icon'
+import Gallery from './components/Gallery'
+import Form from './components/Form'
+import Button from './components/Button'
 import pixelToRem from './utils/pxToRem'
 
 function App() {
@@ -44,7 +42,19 @@ function App() {
 
         </Main>
 
-        <DivIcons>
+        <DivIcons
+          whileInView="visible"
+          initial="initial"
+          viewport={{ once: true }}
+          variants={{
+            initial: { opacity: 0, y: 10 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, delay: 0.3 },
+            },
+          }}
+        >
           <Icon src="/images/icon-rocket.svg" txt="Foguetes com a mais alta tecnologia e conforto." alt="Rocket" />
 
           <Icon src="/images/icon-flag.svg" txt="Mais de 100 missões consecutivas com sucesso." alt="Flag" />
@@ -57,13 +67,43 @@ e exclusiva." alt="Telescope" />
 
       </Container>
 
-      <SectionAbout flex='column' >
+
+      <SectionAbout
+        flex='column'
+
+      >
+
         <Container width='100%' >
           <ContainerAbout width="100%" alignItems='center' justifyContent='center'>
-            <ImageMars />
+            <ImageMars
+
+              whileInView="visible"
+              initial="initial"
+              viewport={{ once: true }}
+              variants={{
+                initial: { opacity: 0, x: "-130%" },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.8, delay: 0.5 },
+                },
+              }}
+            />
 
 
-            <DivAboutMars >
+            <DivAboutMars
+              whileInView="visible"
+              initial="initial"
+              viewport={{ once: true }}
+              variants={{
+                initial: { opacity: 0, x: 60 },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 1, delay: 0.5 },
+                },
+              }}
+            >
               <FirstTitle>Por que Marte?</FirstTitle>
 
               <SecondSubTitle>Sobre o planeta vermelho</SecondSubTitle>
@@ -78,14 +118,39 @@ e exclusiva." alt="Telescope" />
 
         <GalleryContent>
 
-          <DivLogo>
+          <DivLogo
+            whileInView="visible"
+            initial="initial"
+            viewport={{ once: true }}
+            variants={{
+              initial: { opacity: 0, x: 60 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 1, delay: 1 },
+              },
+            }}>
+
             <DivLogoSpaceY>
               <Logo />
             </DivLogoSpaceY>
 
             <TextLogo>O caminho para tornar a humanidade multiplanetária<span>.</span></TextLogo>
 
-            <TextSubscribe>
+            <TextSubscribe
+
+              whileInView="visible"
+              initial="initial"
+              viewport={{ once: true }}
+              variants={{
+                initial: { opacity: 0, y: 100 },
+                visible: {
+                  opacity: 1,
+                  y: -20,
+                  transition: { duration: 1, delay: 1 },
+                },
+              }}
+            >
               Inscreva-se agora
             </TextSubscribe>
           </DivLogo>
@@ -99,9 +164,24 @@ e exclusiva." alt="Telescope" />
 
       </SectionAbout>
 
-      <SectionForm>
+
+      <SectionForm
+      >
         <ContainerForm>
-          <DivForm>
+          <DivForm
+            whileInView="visible"
+            initial="initial"
+            viewport={{ once: true }}
+            variants={{
+              initial: { opacity: 0, x: -60 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 1, delay: 1.5 },
+              },
+            }}
+
+          >
             <IconForm />
 
             <TitleForm>
@@ -126,7 +206,20 @@ e exclusiva." alt="Telescope" />
 
           </DivForm>
 
-          <DivRocketImage>
+          <DivRocketImage
+            whileInView="visible"
+            initial="initial"
+            viewport={{ once: true }}
+            variants={{
+              initial: { opacity: 0, y: 0 },
+              visible: {
+                opacity: 1,
+                y: -100,
+                transition: { duration: 1, delay: 1 },
+              },
+            }}
+
+          >
             <RocketImage>
               <img src="/images/rocket.svg" alt="Rocket" />
             </RocketImage>
@@ -134,7 +227,20 @@ e exclusiva." alt="Telescope" />
         </ContainerForm>
 
         <SectionFooter>
-          <DivImageSmoke>
+          <DivImageSmoke
+
+            whileInView="visible"
+            initial="initial"
+            viewport={{ once: true }}
+            variants={{
+              initial: { opacity: 0, y: 0 },
+              visible: {
+                opacity: 1,
+                y: -100,
+                transition: { duration: 0.7, delay: 0.9 },
+              },
+            }}
+          >
             <img src="/images/smoke.svg" alt="" />
           </DivImageSmoke>
 

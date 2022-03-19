@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import pixelToRem from "../../utils/pxToRem";
+import { motion } from "framer-motion";
 
-export const FormComponent = styled.form`
+export const FormComponent = styled(motion.form)`
   display: flex;
   flex-direction: column;
 `;
